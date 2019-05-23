@@ -45,7 +45,7 @@
 			"viewName": "tc.tagCloud.view.StartView",
 			"type": "XML",
 			"async": true,
-			"id": "Tag"
+			"id": "Start"
 		},
 		"dependencies": {
 			"minUI5Version": "1.60.1",
@@ -79,11 +79,9 @@
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/button.css"
-				}
-			]
+			"css": [{
+				"uri": "css/button.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -95,35 +93,35 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [
-				{
-					"name": "RouteTag",
-					"pattern": "RouteTag",
-					"target": [
-						"TargetTag"
-					]
-				},
-				{
-					"pattern": "Stackoverflow/{Word}",
-					"name": "Stackoverflow",
-					"target": "Stackoverflow"
-				},
-				{
-					"pattern": "Worklist/{Word}",
-					"name": "Worklist",
-					"target": "Worklist"
-				},
-				{
-					"pattern": "links/{tag}",
-					"name": "links",
-					"target": "links"
-				},
-				{
-					"pattern": "TitleListApple/{tag}",
-					"name": "TitleListApple",
-					"target": "TitleListApple"
-				}
-			],
+			"routes": [{
+				"name": "",
+				"pattern": "StartView",
+				"target": ["StartView"]
+			},{
+				"name": "RouteTag",
+				"pattern": "routeTag",
+				"target": ["TargetTag"]
+			}, {
+				"pattern": "Stackoverflow/{Word}",
+				"name": "Stackoverflow",
+				"target": "Stackoverflow"
+			}, {
+				"pattern": "Worklist/{Word}",
+				"name": "Worklist",
+				"target": "Worklist"
+			}, {
+				"pattern": "links/{tag}",
+				"name": "links",
+				"target": "links"
+			}, {
+				"pattern": "TitleListApple/{tag}",
+				"name": "AppleList",
+				"target": "TitleListApple"
+			}, {
+				"name": "MobileBlogsOverview",
+				"pattern": "mobileBlogs",
+				"target": ["MobileBlogsOverview"]
+			}],
 			"targets": {
 				"TargetTag": {
 					"viewType": "XML",
@@ -154,6 +152,10 @@
 				"StartView": {
 					"viewType": "XML",
 					"viewName": "StartView"
+				},
+				"MobileBlogsOverview": {
+					"viewType": "XML",
+					"viewName": "MobileBlogsOverview"
 				}
 			}
 		}

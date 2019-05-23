@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout" xmlns:cust="tc.tagCloud.control" controllerName="tc.tagCloud.controller.MobileBlogsOverview">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<Carousel xmlns="sap.m" id="carousel0">
+						<pages>
+							<VBox id="vbox0">
+								<cust:Custbox src1="https://rydoowebsite.cdn.prismic.io/rydoowebsite%2Fc9116796-b200-4c19-8582-74e486efabaa_sap-logo.svg" prop1="Sap"
+									choose="onChooseTag"/>
+								<Text class="sapUiSmallMargin" text="Here are contains information about most actual SAP blogs, which group by tags"/>
+							</VBox>
+							<VBox id="vbox1">
+								<cust:Custbox src1="https://rydoowebsite.cdn.prismic.io/rydoowebsite%2Fc9116796-b200-4c19-8582-74e486efabaa_sap-logo.svg" prop1="Sap"
+									choose="onChooseTag"/>
+								<Text class="sapUiSmallMargin" text="Here are contains information about most actual SAP blogs, which group by tags"/>
+							</VBox>
+						</pages>
+					</Carousel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

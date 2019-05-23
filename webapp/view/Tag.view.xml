@@ -1,11 +1,13 @@
 <mvc:View controllerName="tc.tagCloud.controller.Tag" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	 xmlns:cust="tc.tagCloud.control" xmlns="sap.m" id="tagID">
-	<App id="app">
+	xmlns:cust="tc.tagCloud.control" xmlns="sap.m" id="tagID">
+	<App>
 		<pages>
 			<Page id="page" title="Blogs">
 				<content>
-					<cust:Custbox src1="https://rydoowebsite.cdn.prismic.io/rydoowebsite%2Fc9116796-b200-4c19-8582-74e486efabaa_sap-logo.svg" prop1="Sap" choose="onChooseTag"></cust:Custbox>
-					<cust:Custbox src1="https://cdn1.savepice.ru/uploads/2019/5/14/86479c3a19f85480e6243ab7f2c952e0-full.jpg" prop1="Stack overflow" choose="onChooseTagStack"></cust:Custbox>
+					<cust:Custbox src1="https://rydoowebsite.cdn.prismic.io/rydoowebsite%2Fc9116796-b200-4c19-8582-74e486efabaa_sap-logo.svg" prop1="Sap"
+						choose="onChooseTag"></cust:Custbox>
+					<cust:Custbox src1="https://cdn1.savepice.ru/uploads/2019/5/14/86479c3a19f85480e6243ab7f2c952e0-full.jpg" prop1="Stack overflow"
+						choose="onChooseTagStack"></cust:Custbox>
 					<cust:Custbox src1="https://cdn1.savepice.ru/uploads/2019/5/14/57cd339b1902629bf6d00a3756a0e69c-full.jpg" prop1="Apple" choose="onChooseTag"></cust:Custbox>
 				</content>
 			</Page>
