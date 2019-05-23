@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "tc.tagCloud.TagCloudV4",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#TagCloudV4-Display",
+        "navigationComponentName": "tc.tagCloud",
+        "intentSemanticObject": "TagCloudV4",
+        "intentAction": "Display",
+        "html5ApplicationName": "tagcloud",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "1321fc3c-388b-4baa-9223-336537d5ab4b"
+        ],
+        "contentPackages": [
+            "bd7ab6fc-2053-437f-83c9-1a95f72477c4"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Text analysis",
+        "subtitle": "Tag Cloud",
+        "searchKeywords": "Text analysis,Tag Cloud",
+        "displayIconUrl": "sap-icon://tag-cloud-chart",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

@@ -1,0 +1,15 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tc.tagCloud.controller.Stackoverflow" xmlns:cust="tc.tagCloud.control"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					
+					<cust:Custbox src1="https://cdn1.savepice.ru/uploads/2019/5/14/86479c3a19f85480e6243ab7f2c952e0-full.jpg" prop1="Stack companies" choose="onChooseTag"></cust:Custbox>
+					<cust:Custbox src1="https://cdn1.savepice.ru/uploads/2019/5/14/86479c3a19f85480e6243ab7f2c952e0-full.jpg" prop1="STACK_ENG" choose="onChooseTag"></cust:Custbox>
+					<cust:Custbox src1="https://cdn1.savepice.ru/uploads/2019/5/14/86479c3a19f85480e6243ab7f2c952e0-full.jpg" prop1="STACK_CODE" choose="onChooseTag"></cust:Custbox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

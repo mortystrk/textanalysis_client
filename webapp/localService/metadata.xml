@@ -1,0 +1,11 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="textanalysis.content.src.AppleNewsRoomInfo">
+			<EntityType Name="AppleNewsRoomType">
+				<Key><PropertyRef Name="LINK"/></Key><Property Name="TM_TERM" Type="Edm.String" MaxLength="5000"/><Property Name="TM_TERM_FREQUENCY" Type="Edm.Int32"/><Property Name="LINK" Type="Edm.String" Nullable="false" MaxLength="250"/><Property Name="TITLE" Type="Edm.String" MaxLength="250"/><Property Name="CATEGORY" Type="Edm.String" MaxLength="50"/></EntityType>
+			<EntityContainer Name="AppleNewsRoomInfo" m:IsDefaultEntityContainer="true"><EntitySet Name="AppleNewsRoom" EntityType="textanalysis.content.src.AppleNewsRoomInfo.AppleNewsRoomType"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

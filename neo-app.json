@@ -1,0 +1,80 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/textanalysis/content/src/test.xsodata",
+      "target": {
+        "type": "destination",
+        "name": "Blogs"
+      },
+      "description": "Blogs"
+    },
+    {
+      "path": "/textanalysis/content/src/test.xsjs",
+      "target": {
+        "type": "destination",
+        "name": "Blogs_js"
+      },
+      "description": "Blogs_js"
+    },
+    {
+      "path": "/textanalysis/content/src/blogsInfo.xsodata",
+      "target": {
+        "type": "destination",
+        "name": "Blogs_Info"
+      },
+      "description": "Blogs_Info"
+    },
+    {
+      "path": "/textanalysis/content/src/load_array.xsjs",
+      "target": {
+        "type": "destination",
+        "name": "Load_array"
+      },
+      "description": "Load_array"
+    },
+    {
+      "path": "/textanalysis/content/src/load.xsjs",
+      "target": {
+        "type": "destination",
+        "name": "Load"
+      },
+      "description": "Load"
+    },
+    {
+      "path": "/textanalysis/content/src/truncate.xsjs",
+      "target": {
+        "type": "destination",
+        "name": "Truncate"
+      },
+      "description": "Truncate"
+    },
+    {
+      "path": "/textanalysis/content/src/AppleNewsRoomInfo.xsodata",
+      "target": {
+        "type": "destination",
+        "name": "Blogs_InfoApple"
+      },
+      "description": "Blogs_InfoApple"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}

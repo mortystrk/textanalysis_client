@@ -1,0 +1,20 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tc.tagCloud.controller.TitleListApple"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<List id="blogsInfo" items="{path: '/AppleNewsRoom'}" headerText="Blogs">
+						<items>
+							<ObjectListItem id="infoListItem" title="{TITLE}" type="Active" press="onListItemPress">
+								<firstStatus>
+									<ObjectStatus id="infoObjectStatus" text="{CATEGORY}"/>
+								</firstStatus>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

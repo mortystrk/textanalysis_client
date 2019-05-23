@@ -1,0 +1,161 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "tc.tagCloud",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"AppleNewsRoomInfo.xsodata": {
+				"uri": "/textanalysis/content/src/AppleNewsRoomInfo.xsodata/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "tc.tagCloud.view.Tag",
+			"type": "XML",
+			"async": true,
+			"id": "Tag"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "tc.tagCloud.i18n.i18n"
+				}
+			},
+			"AppleInfo": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": true
+				},
+				"dataSource": "AppleNewsRoomInfo.xsodata",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/button.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "tc.tagCloud.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteTag",
+					"pattern": "RouteTag",
+					"target": [
+						"TargetTag"
+					]
+				},
+				{
+					"pattern": "Stackoverflow/{Word}",
+					"name": "Stackoverflow",
+					"target": "Stackoverflow"
+				},
+				{
+					"pattern": "Worklist/{Word}",
+					"name": "Worklist",
+					"target": "Worklist"
+				},
+				{
+					"pattern": "links/{tag}",
+					"name": "links",
+					"target": "links"
+				},
+				{
+					"pattern": "TitleListApple/{tag}",
+					"name": "TitleListApple",
+					"target": "TitleListApple"
+				}
+			],
+			"targets": {
+				"TargetTag": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "Tag",
+					"viewName": "Tag"
+				},
+				"Worklist": {
+					"viewType": "XML",
+					"viewName": "Worklist"
+				},
+				"TitleList": {
+					"viewType": "XML",
+					"viewName": "TitleList"
+				},
+				"links": {
+					"viewName": "TitleList"
+				},
+				"Stackoverflow": {
+					"viewType": "XML",
+					"viewName": "Stackoverflow"
+				},
+				"TitleListApple": {
+					"viewType": "XML",
+					"viewName": "TitleListApple"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

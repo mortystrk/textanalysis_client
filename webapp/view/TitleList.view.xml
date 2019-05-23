@@ -1,0 +1,15 @@
+<mvc:View controllerName="tc.tagCloud.controller.TitleList" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:cust="tc.tagCloud.control">
+	<Page id="page" title="Relevant Blogs">
+		<content>
+			<List id="blogsInfo" items="{path: '/BlogsInfo'}" headerText="Blogs">
+				<items>
+					<ObjectListItem id="infoListItem" title="{TITLE}" type="Active" press="onListItemPress">
+						<firstStatus>
+							<ObjectStatus id="infoObjectStatus" text="{AUTHOR}" />
+						</firstStatus>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</mvc:View>

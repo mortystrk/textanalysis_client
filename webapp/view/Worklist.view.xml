@@ -1,0 +1,11 @@
+<mvc:View controllerName="tc.tagCloud.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:tagCloud="tc.tagCloud.control"
+	xmlns:semantic="sap.f.semantic">
+	<Page id="tc" title="BLOG blogs.sap.com" class="sapUiContentPadding">
+		<content>
+			<tagCloud:Button prop1="Load" choose="onChooseButton"/>
+			<tagCloud:Button prop1="Refresh"  choose="onChooseButton"/>
+			<tagCloud:Button prop1="Truncate" choose="onChooseButton"/>
+			<tagCloud:TagCloud id1="TagCloud"/>
+		</content>
+	</Page>
+</mvc:View>
