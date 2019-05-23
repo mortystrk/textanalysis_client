@@ -42,7 +42,7 @@
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
-			"viewName": "tc.tagCloud.view.Tag",
+			"viewName": "tc.tagCloud.view.StartView",
 			"type": "XML",
 			"async": true,
 			"id": "Tag"
@@ -150,6 +150,10 @@
 				"TitleListApple": {
 					"viewType": "XML",
 					"viewName": "TitleListApple"
+				},
+				"StartView": {
+					"viewType": "XML",
+					"viewName": "StartView"
 				}
 			}
 		}
