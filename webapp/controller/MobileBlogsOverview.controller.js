@@ -1,6 +1,7 @@
 sap.ui.define([
+	"../model/blog",
 	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+], function (blog, Controller) {
 	"use strict";
 
 	return Controller.extend("tc.tagCloud.controller.MobileBlogsOverview", {
@@ -11,34 +12,26 @@ sap.ui.define([
 		 * @memberOf tc.tagCloud.view.MobileBlogsOverview
 		 */
 		onInit: function () {
-
+			blog.getInstance(this.getView());
 		},
 
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf tc.tagCloud.view.MobileBlogsOverview
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
+		onChooseTag: function (oEvent) {
+			var word = oEvent.getParameter("value");
+			blog.getInstance().setParNext(word);
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Worklist", {
+				Word: word
+			});
 
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf tc.tagCloud.view.MobileBlogsOverview
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
+		},
+		onChooseTagStack: function (oEvent) {
+			var word = oEvent.getParameter("value");
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Stackoverflow", {
+				Word: word
+			});
 
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf tc.tagCloud.view.MobileBlogsOverview
-		 */
-		//	onExit: function() {
-		//
-		//	}
+		}
 
 	});
 
